@@ -31,7 +31,9 @@ var serviceAccount = require("./cryptosingalapplication-firebase-adminsdk-clz0n-
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
-
+app.get("/", (req, res) => {
+  res.status(200).json({ msg: "Server up" });
+});
 app.post("/notification", async (req, res) => {
   // console.log(d);
   // const message = {
