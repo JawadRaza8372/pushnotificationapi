@@ -26,7 +26,7 @@ admin.initializeApp({
 });
 
 router.get("/", (req, res) => {
-  res.status(200).json({ msg: "Server up" });
+  res.status(200).send("Server up");
 });
 router.post("/notification", async (req, res) => {
   // console.log(d);
